@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        Escala para la unidad de cuidados especiales
+    </title>
+    <script src="js/scriptEscalaUnidadCuidadosEspeciales.js"></script>
+    <link rel="stylesheet" href="css/styleGlobal.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet"> 
+</head>
+
+<body>
+    <div class="topnav">
+        <a href="EscalaHospitalizacion.html">Escala hospitalización</a>
+        <a href="EscalaUnidadCuidadosEspeciales.html">Escala unidad cuidados especiales</a>
+        <a href="EscalaUnidadCuidadosIntesivos.html">Escala unidad cuidados intensivos</a>
+    </div>
+    <h1 id="titulo">Escala para la unidad de cuidados especiales</h1>
+    <div id="parent">
+        <div id="indiceBarthel">
+            <h1>Índice de Barthel</h1>
+            <!--Comer-->
+            <div class="form-control">
+                <label for="role" id="label-role">
+					Comer
+				</label>
+                <select name="role" id="Comer">
+					<option value="totInd-Comer">Totalmente independiente</option>
+					<option value="necesAsis-Comer">Necesita asistencia, pero come solo</option>
+					<option value="dep-Comer">Dependiente</option>
+				</select>
+            </div>
+
+            <!--Baño-->
+            <div class="form-control">
+                <label for="role" id="label-role">
+					Baño
+				</label>
+                <select name="role" id="Bath">
+					<option value="totInd-Bath">Independiente</option>
+					<option value="dep-Bath">Dependiente</option>
+				</select>
+            </div>
+
+            <!--Vestirse-->
+            <div class="form-control">
+                <label for="role" id="label-role">
+					Vestirse
+				</label>
+                <select name="role" id="Vestirse">
+					<option value="totInd-Vestirse">Independiente</option>
+					<option value="necesAsis-Vestirse">Necesita algo de ayuda</option>
+					<option value="dep-Vestirse">Dependiente</option>
+				</select>
+            </div>
+
+            <!--Arreglo personal-->
+            <div class="form-control">
+                <label for="role" id="label-role">
+					Arreglo personal
+				</label>
+                <select name="role" id="ArrPer">
+					<option value="totInd-ArrPer">Puede hacerlo por su cuenta</option>
+					<option value="necesAsis-ArrPer">Necesita ayuda con su cuidado personal</option>
+				</select>
+            </div>
+
+            <!--Deposición-->
+            <div class="form-control">
+                <label for="role" id="label-role">
+					Deposición
+				</label>
+                <select name="role" id="Deposi">
+					<option value="conti-Deposi">Continente</option>
+					<option value="algProb-Deposi">Algún problema ocasional</option>
+					<option value="incont-Deposi">Incontinencia</option>
+				</select>
+            </div>
+
+            <!--Micción-->
+            <div class="form-control">
+                <label for="role" id="label-role">
+					Micción
+				</label>
+                <select name="role" id="Miccion">
+					<option value="conti-Miccion">Continente</option>
+					<option value="necesAsis-Miccion">Necesita asistencia, pero come solo</option>
+					<option value="incont-Miccion">Incontinente</option>
+				</select>
+            </div>
+
+            <!--Uso del inodoro-->
+            <div class="form-control">
+                <label for="role" id="label-role">
+					Uso del inodoro
+				</label>
+                <select name="role" id="UsoInodoro">
+					<option value="totInd-UsoInodoro">Totalmente independiente</option>
+					<option value="necesAsis-UsoInodoro">Necesita alguna ayuda</option>
+					<option value="dep-UsoInodoro">Dependiente</option>
+				</select>
+            </div>
+
+            <!--Traslado de la cama a una silla o viceversa-->
+            <div class="form-control">
+                <label for="role" id="label-role">
+					Traslado de la cama a una silla o viceversa
+				</label>
+                <select name="role" id="Traslado">
+					<option value="totInd-Traslado">Independiente</option>
+					<option value="min-Traslado">Mínima ayuda física o supervisión para hacerlo</option>
+					<option value="necesAsis-Traslado">Necesita bastante ayuda, pero puede permanecer sentado</option>
+					<option value="dep-Traslado">Dependiente</option>
+				</select>
+            </div>
+
+            <!--Deambular-->
+            <div class="form-control">
+                <label for="role" id="label-role">
+					Deambular
+				</label>
+                <select name="role" id="Deambular">
+					<option value="totInd-Deambular">Independiente</option>
+					<option value="camina-Deambular">Camina con ayuda de una persona</option>
+					<option value="silla-Deambular">Silla de ruedas</option>
+					<option value="dep-Deambular">Dependiente</option>
+				</select>
+            </div>
+
+            <!--Escaleras-->
+            <div class="form-control">
+                <label for="role" id="label-role">
+					Escaleras
+				</label>
+                <select name="role" id="Escaleras">
+					<option value="totInd-Escaleras">Independiente</option>
+					<option value="necesAsis-Escaleras">Necesita ayuda física o verbal</option>
+					<option value="dep-Escaleras">Dependiente</option>
+				</select>
+            </div>
+
+            <button type="submit" value="calcInd" onclick="indBarthel()">
+				Calcular Índice
+			</button>
+        </div>
+
+        <div hidden>
+            <label for="name" id="tiempo"></label>
+        </div>
+
+        <div id="dependenciasBarthel">
+            <h1>Dependencias según Barthel</h1>
+            <div class="form-control">
+                <label for="name" id="label-name">
+					Puntuación BARTHEL
+				</label>
+
+                <input type="text" id="Puntuacion" disabled />
+            </div>
+            <!--Monitorizacion-->
+            <div class="form-control">
+                <label>Monitorización
+					<small>(Selecciona todas las que apliquen)</small>
+				</label>
+                <label for="inp-1">
+					<input type="checkbox" name="inp" id="signos">Signos Vitales (FC, FR, T°, Sat.O2, PA)
+				</label>
+                <label for="inp-2">
+					<input type="checkbox" name="inp" id="signosxHora">Registro de signos vitales cada hora, si medicamentos inotrópicos o vasoactivos.
+				</label>
+                <label for="inp-3">
+					<input type="checkbox" name="inp" id="balance">Balance de líquidos
+				</label>
+                <label for="inp-4">
+					<input type="checkbox" name="inp" id="drenes">Medición de drenes
+				</label>
+            </div>
+
+            <!--Apoyo respiratorio-->
+            <div class="form-control">
+                <label for="role" id="label-role">
+					Apoyo respiratorio
+				</label>
+                <select name="role" id="ApRespiratorio">
+					<option value="venti-ApRespiratorio">Apoyo ventilatorio suplementario</option>
+					<option value="mecani-ApRespiratorio">Ventilación mecánica</option>
+				</select>
+            </div>
+
+            <!--Apoyo hemodinámico y cardiovascular-->
+            <div class="form-control">
+                <label>Apoyo hemodinámico y cardiovascular
+					<small>(Selecciona la opción si aplica)</small>
+				</label>
+                <label for="inp-1">
+					<input type="checkbox" name="inp" id="cuidadoPost">Cuidados post decanulación radial y femoral
+				</label>
+            </div>
+
+            <!--Preparación para procedimientos y ayudas diagnósticas-->
+            <div class="form-control">
+                <label for="role" id="label-role">
+					Preparación para procedimientos y ayudas diagnósticas
+				</label>
+                <select name="role" id="prepProcedimientos">
+					<option value="tralado-prepProcedimientos">Traslado del paciente a hemodinamia y electrofisiología</option>
+					<option value="quirur-prepProcedimientos">Preparación quirúrgica</option>
+					<option value="ayudas-prepProcedimientos">Preparación ayudas diagnósticas específicas</option>
+				</select>
+            </div>
+
+            <!--Administración de medicamentos-->
+            <div class="form-control">
+                <label for="role" id="label-role">
+					Administración de medicamentos
+				</label>
+                <select name="role" id="Medicamentos">
+					<option value="inf-Medicamentos">Infusión de fármacos vasoactivos y/o inotrópicos</option>
+					<option value="admin-Medicamentos">Administración de medicamentos intravenosos, orales, subcutáneos e inhalados</option>
+				</select>
+            </div>
+
+            <!--Movilización-->
+            <div class="form-control">
+                <label for="role" id="label-role">
+					Movilización
+				</label>
+                <select name="role" id="Movilizacion">
+					<option value="cambios-Movilizacion">Cambios posturales</option>
+					<option value="sillon-Movilizacion">Movilizar a sillón</option>
+					<option value="inmovi-Movilizacion">Inmovilización física preventiva</option>
+					<option value="acomp-Movilizacion">Acompañamiento en la ducha</option>
+				</select>
+            </div>
+
+            <!--Higiene-->
+            <div class="form-control">
+                <label for="role" id="label-role">
+					Higiene
+				</label>
+                <select name="role" id="Higiene">
+					<option value="cura-Higiene">Curaciones de catéteres</option>
+					<option value="nutri-Higiene">Nutrición enteral y cuidados</option>
+					<option value="cambio-Higiene">Cambio de tendidos de cama</option>
+				</select>
+            </div>
+
+            <!--Cuidados generales-->
+            <div class="form-control">
+                <label for="role" id="label-role">
+					Cuidados generales
+				</label>
+                <select name="role" id="CuidadosGenerales">
+					<option value="bath-CuidadosGenerales">Baño en cama</option>
+					<option value="higiene-CuidadosGenerales">Higiene bucal</option>
+					<option value="afeitado-CuidadosGenerales">Afeitado, corte de uñas</option>
+					<option value="hidratacion-CuidadosGenerales">Hidratación corporal</option>
+				</select>
+            </div>
+
+            <div class="form-control">
+                <label for="comment">
+					Resultados
+				</label>
+                <textarea name="comment" id="Resultados"></textarea>
+            </div>
+
+            <button type="submit" value="submit" onclick="depBarthel()">
+				Estimar tiempo
+			</button>
+        </div>
+    </div>
+</body>
+
+</html>

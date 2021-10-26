@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        Escala de asignación de la unidad de cuidados intensivos
+    </title>
+    <script src="js/scriptEscalaUnidadCuidadosIntensivos.js"></script>
+    <link rel="stylesheet" href="css/styleGlobal.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet"> 
+</head>
+
+<body>
+    <div class="topnav">
+        <a href="EscalaHospitalizacion.html">Escala hospitalización</a>
+        <a href="EscalaUnidadCuidadosEspeciales.html">Escala unidad cuidados especiales</a>
+        <a href="EscalaUnidadCuidadosIntesivos.html">Escala unidad cuidados intensivos</a>
+    </div>
+    <h1 id="titulo">Escala de asignación de la unidad de cuidados intensivos</h1>
+
+    <div id="parent">
+        <div id="indiceBarthel">
+            <h1>Escala NAS</h1>
+            <!--Monitorizacion básica-->
+            <div class="form-control">
+                <label for="role" id="label-role">
+					Monitorizacion básica
+				</label>
+                <select name="role" id="Monitorizacion">
+					<option value="signos-Monitorizacion">Signos vitales horarios, Registro y cálculo de balance de fluidos</option>
+					<option value="presen2h-Monitorizacion">Estar presente a pie de cama y observación continua o activa de 2h o más durante algún turno</option>
+					<option value="presen4h-Monitorizacion">Estar presente a pie de cama y observación activa de 4h o más durante algún turno</option>
+				</select>
+            </div>
+
+            <div class="form-control">
+                <label>Realización de procedimientos de laboratorio, bioquímica y microbiología
+					<small>(Selecciona la opción si aplica)</small>
+				</label>
+                <label for="inp-1">
+					<input type="checkbox" name="inp" id="tomaMuestra">Toma de muestras de laboratorio
+				</label>
+            </div>
+
+            <div class="form-control">
+                <label>Administración de medicación
+					<small>(Selecciona la opción si aplica)</small>
+				</label>
+                <label for="inp-1">
+					<input type="checkbox" name="inp" id="admMedicacion">Excepto los fármacos vasoactivos
+				</label>
+            </div>
+
+            <!--Procedimientos de higiene-->
+            <div class="form-control">
+                <label for="role" id="label-role">
+                    Procedimientos de higiene
+                </label>
+                <select name="role" id="Procedimientos">
+                    <option value="higi-Procedimientos">Realización de procedimientos higiénicos tales como cura de heridas y catéteres intravasculares, aseo del paciente, cambio de sábanas, incontinencia, vómitos, quemaduras, entre otros.</option>
+                    <option value="presen2h-Procedimientos">Realizacion de estos procedimientos de higiene durante más de 2h</option>
+                    <option value="presen4h-Procedimientos">Realizacion de estos procedimientos de higiene durante más de 4h</option>
+                </select>
+            </div>
+
+            <div class="form-control">
+                <label>Cuidados de drenajes
+					<small>(Selecciona la opción si aplica)</small>
+				</label>
+                <label for="inp-1">
+					<input type="checkbox" name="inp" id="cuidDrenaje">Todos exceptuando la sonda gástrica
+				</label>
+            </div>
+
+            <!--Movilización y cambios posicionales-->
+            <div class="form-control">
+                <label for="role" id="label-role">
+                    Movilización y cambios posicionales
+                </label>
+                <select name="role" id="MovilizacionCambio">
+                    <option value="uno-MovilizacionCambio">Realización de procedimientos hasta 3 veces en 24</option>
+                    <option value="dos-MovilizacionCambio">Realización de procedimientos más de 3 veces en 24 h o con 2 enfermeras</option>
+                    <option value="tres-MovilizacionCambio">Realización de procedimientos con 3 o más enfermeras, con cualquier enfermera</option>
+                </select>
+            </div>
+
+            <!--Apoyo y cuidados de familiares y pacientes-->
+            <div class="form-control">
+                <label for="role" id="label-role">
+                    Apoyo y cuidados de familiares y pacientes
+                </label>
+                <select name="role" id="apoyoCuidado">
+                    <option value="ap1h-apoyoCuidado">Apoyo y cuidados de familiares o pacientes que requieren completa dedicación durante al menos 1h</option>
+                    <option value="ap3h-apoyoCuidado">Apoyo y cuidados de familiares o pacientes que requieren completa dedicación durante al menos 3h</option>
+                </select>
+            </div>
+
+            <div class="form-control">
+                <label>Tareas administrativas y de organización
+					<small>(Selecciona la opción si aplica)</small>
+				</label>
+                <label for="inp-1">
+					<input type="checkbox" name="inp" id="tarAdmin">Tareas rutinarias tales como procesamiento de datos clínicos, solicitud de pruebas, intercambio profesional de información.
+				</label>
+            </div>
+
+            <h2>Soporte y ventilatorio</h2>
+
+            <div class="form-control">
+                <label>Soporte respiratorio
+					<small>(Selecciona la opción si aplica)</small>
+				</label>
+                <label for="inp-1">
+					<input type="checkbox" name="inp" id="ventMecanica">Cualquier forma de ventilación mecánica, ventilación asistida con o sin PEEP con o sin relajantes musculares.
+				</label>
+            </div>
+            
+            <div class="form-control">
+                <label>Cuidados de la vía aérea artificial
+					<small>(Selecciona la opción si aplica)</small>
+				</label>
+                <label for="inp-1">
+					<input type="checkbox" name="inp" id="cuidViaAerea">Tubo endotraqueal o cánula de traqueostomía.
+				</label>
+            </div>
+
+            <div class="form-control">
+                <label>Tratamiento para mejorar la función pulmonar
+					<small>(Selecciona la opción si aplica)</small>
+				</label>
+                <label for="inp-1">
+					<input type="checkbox" name="inp" id="tratPulmonar">Fisioterapia respiratoria, espirometría incentivada, terapia inhalatoria, aspiración endotraqueal.
+				</label>
+            </div>
+
+            <h2>Soporte cardiovascular</h2>
+
+            <div class="form-control">
+                <label>Medicación vasoactiva
+					<small>(Selecciona la opción si aplica)</small>
+				</label>
+                <label for="inp-1">
+					<input type="checkbox" name="inp" id="medVasoactiva">Independientemente del tipo y la dosis.
+				</label>
+            </div>
+
+            <div class="form-control">
+                <label>Reposición intravenosa de altas dosis de fluidos
+					<small>(Selecciona la opción si aplica)</small>
+				</label>
+                <label for="inp-1">
+					<input type="checkbox" name="inp" id="repoIntra">Administración de 3lml/h (≈6l/24h), sin tener en cuenta el tipo de fluidos administrados.
+				</label>
+            </div>
+
+            <div class="form-control">
+                <label>Monitorización de la aurícula izquierda
+					<small>(Selecciona la opción si aplica)</small>
+				</label>
+                <label for="inp-1">
+					<input type="checkbox" name="inp" id="monitAuriIzq">
+				</label>
+            </div>
+
+            <div class="form-control">
+                <label>Resucitación cardiopulmonar tras parada
+					<small>(Selecciona la opción si aplica)</small>
+				</label>
+                <label for="inp-1">
+					<input type="checkbox" name="inp" id="resutacion">
+				</label>
+            </div>
+
+            <h2>Soporte renal</h2>
+
+            <div class="form-control">
+                <label>Técnicas de hemofiltración
+					<small>(Selecciona la opción si aplica)</small>
+				</label>
+                <label for="inp-1">
+					<input type="checkbox" name="inp" id="tecHemo">Técnicas de diálisis
+				</label>
+            </div>
+
+            <div class="form-control">
+                <label>Mediciones cuantitativas de orina
+					<small>(Selecciona la opción si aplica)</small>
+				</label>
+                <label for="inp-1">
+					<input type="checkbox" name="inp" id="mediOrina">Ej. a través de sonda vesical.
+				</label>
+            </div>
+
+            <h2>Soporte neurológico</h2>
+
+            <div class="form-control">
+                <label>Medición de la presión intracraneal
+					<small>(Selecciona la opción si aplica)</small>
+				</label>
+                <label for="inp-1">
+					<input type="checkbox" name="inp" id="mediPresion">
+				</label>
+            </div>
+
+            <h2>Soporte metabólico</h2>
+
+            <div class="form-control">
+                <label>Tratamiento de complicaciones metabólicas
+					<small>(Selecciona la opción si aplica)</small>
+				</label>
+                <label for="inp-1">
+					<input type="checkbox" name="inp" id="tratCompl">Solo acidosis/alcalosis
+				</label>
+            </div>
+
+            <div class="form-control">
+                <label>Nutrición parental
+					<small>(Selecciona la opción si aplica)</small>
+				</label>
+                <label for="inp-1">
+					<input type="checkbox" name="inp" id="nutriParental">
+				</label>
+            </div>
+
+            <div class="form-control">
+                <label>Alimentación enteral
+					<small>(Selecciona la opción si aplica)</small>
+				</label>
+                <label for="inp-1">
+					<input type="checkbox" name="inp" id="alimEnteral">Sonda digestiva u otra vía gastrointestinal (p. ek. yeyunostomía)
+				</label>
+            </div>
+
+            <h2>Intervenciones específicas</h2>
+
+            <div class="form-control">
+                <label>Intervenciones específicas en la unidad de cuidados intensivos
+					<small>(Selecciona la opción si aplica)</small>
+				</label>
+                <label for="inp-1">
+					<input type="checkbox" name="inp" id="intervCuidadosInt">Intubación endotraqueal, inserción de marcapasos, cardioversión, endoscopias, cirugía de urgencia en las últimas 24h, lavado gástrico.  
+				</label>
+            </div>
+
+            <div class="form-control">
+                <label>Intervenciones específicas fuera de la unidad de cuidados intensivos
+					<small>(Selecciona la opción si aplica)</small>
+				</label>
+                <label for="inp-1">
+					<input type="checkbox" name="inp" id="intervEspecifIntensivos">Cirugías o procedimientos diagnósticos
+				</label>
+            </div>
+
+            <button type="submit" value="calcInd" onclick="indBarthel()">
+				Calcular Índice
+			</button>
+            
+            <div class="form-control">
+                <label for="comment">
+					Resultados
+				</label>
+                <textarea name="comment" id="Resultados"></textarea>
+            </div>
+        </div>
+
+        <div hidden>
+            <label for="name" id="tiempo"></label>
+        </div>
+
+    </div>
+</body>
+
+</html>
