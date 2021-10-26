@@ -183,101 +183,88 @@ function depBarthel() {
 
     var horas = 0,
         minutos = 0;
-
+    // Monitorización
     if (document.getElementById('signos').checked == true) {
         tiempo += 15;
-        console.log(tiempo);
     }
-
     if (document.getElementById('signosxHora').checked == true) {
         tiempo += 30;
-        console.log(tiempo);
     }
-
     if (document.getElementById('balance').checked == true) {
         tiempo += 30;
-        console.log(tiempo);
     }
-
     if (document.getElementById('drenes').checked == true) {
         tiempo += 15;
-        console.log(tiempo);
     }
-
-    switch (ApRespiratorio.value) {
-        case 'venti-ApRespiratorio':
-            tiempo += 15;
-            break;
-        case 'mecani-ApRespiratorio':
-            tiempo += 30;
-            break;
+    // Apoyo respiratorio
+    if (document.getElementById('apVenti').checked == true) {
+        tiempo += 15;
     }
-
-    if (document.getElementById('cuidadoPost').checked == true) {
+    if (document.getElementById('venMecani').checked == true) {
         tiempo += 30;
     }
 
-    switch (prepProcedimientos.value) {
-        case 'tralado-prepProcedimientos':
-            tiempo += 20;
-            break;
-        case 'quirur-prepProcedimientos':
-            tiempo += 30;
-            break;
-        case 'ayudas-prepProcedimientos':
-            tiempo += 20;
-            break;
+    // Apoyo hemodinámico
+    if (document.getElementById('cuidPost').checked == true) {
+        tiempo += 30;
     }
 
-    switch (Medicamentos.value) {
-        case 'inf-Medicamentos':
-            tiempo += 40;
-            break;
-        case 'admin-Medicamentos':
-            tiempo += 40;
-            break;
+    // Preparación para procedimientos y ayudas diagnósticas
+    if (document.getElementById('trasPaciente').checked == true) {
+        tiempo += 20;
+    }
+    if (document.getElementById('prepQuirur').checked == true) {
+        tiempo += 30;
+    }
+    if (document.getElementById('prepAyudas').checked == true) {
+        tiempo += 30;
     }
 
-    switch (Movilizacion.value) {
-        case 'cambios-Movilizacion':
-            tiempo += 30;
-            break;
-        case 'sillon-Movilizacion':
-            tiempo += 4;
-            break;
-        case 'inmovi-Movilizacion':
-            tiempo += 5;
-            break;
-        case 'acomp-Movilizacion':
-            tiempo += 15;
-            break;
+    // Administracion de medicamentos
+    if (document.getElementById('infFarmacos').checked == true) {
+        tiempo += 40;
+    }
+    if (document.getElementById('admIntra').checked == true) {
+        tiempo += 40;
     }
 
-    switch (Higiene.value) {
-        case 'cura-Higiene':
-            tiempo += 20;
-            break;
-        case 'nutri-Higiene':
-            tiempo += 20;
-            break;
-        case 'cambio-Higiene':
-            tiempo += 10;
-            break;
+    // Movilizacion
+    if (document.getElementById('cambiosPost').checked == true) {
+        tiempo += 30;
+    }
+    if (document.getElementById('movSillon').checked == true) {
+        tiempo += 4;
+    }
+    if (document.getElementById('inmoviFisica').checked == true) {
+        tiempo += 5;
+    }
+    if (document.getElementById('acompDucha').checked == true) {
+        tiempo += 15;
     }
 
-    switch (CuidadosGenerales.value) {
-        case 'bath-CuidadosGenerales':
-            tiempo += 40;
-            break;
-        case 'higiene-CuidadosGenerales':
-            tiempo += 9;
-            break;
-        case 'afeitado-CuidadosGenerales':
-            tiempo += 5;
-            break;
-        case 'hidratacion-CuidadosGenerales':
-            tiempo += 4;
-            break;
+    // Procedimientos de higiene
+    if (document.getElementById('curCateter').checked == true) {
+        tiempo += 20;
+    }
+    if (document.getElementById('nutriEnteral').checked == true) {
+        tiempo += 20;
+    }
+    if (document.getElementById('cambCama').checked == true) {
+        tiempo += 10;
+    }
+
+    // Cuidados generales
+    if (document.getElementById('bathCama').checked == true) {
+        tiempo += 40;
+    }
+    if (document.getElementById('higBucal').checked == true) {
+        tiempo += 9;
+    }
+    if (document.getElementById('afeitado').checked == true) {
+        tiempo += 5;
+    }
+    if (document.getElementById('hidratCorp').checked == true) {
+        tiempo += 4;
     }
 
     horas = tiempo / 60;

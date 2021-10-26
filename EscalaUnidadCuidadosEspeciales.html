@@ -163,13 +163,14 @@
 
                 <input type="text" id="Puntuacion" disabled />
             </div>
+            
             <!--Monitorizacion-->
             <div class="form-control">
                 <label>Monitorización
 					<small>(Selecciona todas las que apliquen)</small>
 				</label>
                 <label for="inp-1">
-					<input type="checkbox" name="inp" id="signos">Signos Vitales (FC, FR, T°, Sat.O2, PA)
+					<input type="checkbox" name="inp" id="signos">Registro signos vitales cada 2 horas.
 				</label>
                 <label for="inp-2">
 					<input type="checkbox" name="inp" id="signosxHora">Registro de signos vitales cada hora, si medicamentos inotrópicos o vasoactivos.
@@ -184,13 +185,15 @@
 
             <!--Apoyo respiratorio-->
             <div class="form-control">
-                <label for="role" id="label-role">
-					Apoyo respiratorio
+                <label>Apoyo respiratorio
+					<small>(Selecciona todas las que apliquen)</small>
 				</label>
-                <select name="role" id="ApRespiratorio">
-					<option value="venti-ApRespiratorio">Apoyo ventilatorio suplementario</option>
-					<option value="mecani-ApRespiratorio">Ventilación mecánica</option>
-				</select>
+                <label for="inp-1">
+					<input type="checkbox" name="inp" id="apVenti">Apoyo ventilatorio suplementario (sistemas no invasivos).
+				</label>
+                <label for="inp-2">
+					<input type="checkbox" name="inp" id="venMecani">Ventilación mecánica invasiva.
+				</label>
             </div>
 
             <!--Apoyo hemodinámico y cardiovascular-->
@@ -199,69 +202,91 @@
 					<small>(Selecciona la opción si aplica)</small>
 				</label>
                 <label for="inp-1">
-					<input type="checkbox" name="inp" id="cuidadoPost">Cuidados post decanulación radial y femoral
+					<input type="checkbox" name="inp" id="cuidPost">Cuidados post decanulación radial y femoral.
 				</label>
             </div>
 
             <!--Preparación para procedimientos y ayudas diagnósticas-->
             <div class="form-control">
-                <label for="role" id="label-role">
-					Preparación para procedimientos y ayudas diagnósticas
+                <label>Preparación para procedimientos y ayudas diagnósticas
+					<small>(Selecciona todas las que apliquen)</small>
 				</label>
-                <select name="role" id="prepProcedimientos">
-					<option value="tralado-prepProcedimientos">Traslado del paciente a hemodinamia y electrofisiología</option>
-					<option value="quirur-prepProcedimientos">Preparación quirúrgica</option>
-					<option value="ayudas-prepProcedimientos">Preparación ayudas diagnósticas específicas</option>
-				</select>
+                <label for="inp-1">
+					<input type="checkbox" name="inp" id="trasPaciente">Traslado del paciente interno
+				</label>
+                <label for="inp-2">
+					<input type="checkbox" name="inp" id="prepQuirur">Preparación quirúrgica
+				</label>
+                <label for="inp-3">
+					<input type="checkbox" name="inp" id="prepAyudas">Preparación para ayudas diagnósticas específicas
+				</label>
             </div>
 
             <!--Administración de medicamentos-->
             <div class="form-control">
-                <label for="role" id="label-role">
-					Administración de medicamentos
+                <label>Administración de medicamentos
+					<small>(Selecciona todas las que apliquen)</small>
 				</label>
-                <select name="role" id="Medicamentos">
-					<option value="inf-Medicamentos">Infusión de fármacos vasoactivos y/o inotrópicos</option>
-					<option value="admin-Medicamentos">Administración de medicamentos intravenosos, orales, subcutáneos e inhalados</option>
-				</select>
+                <label for="inp-1">
+					<input type="checkbox" name="inp" id="infFarmacos">Infusión de fármacos vasoactivos y/o inotrópicos
+				</label>
+                <label for="inp-2">
+					<input type="checkbox" name="inp" id="admIntra">Administración de medicamentos intravenosos, orales, subcutáneos e inhalados.
+				</label>
             </div>
 
-            <!--Movilización-->
+            <!--Movilizacion-->
             <div class="form-control">
-                <label for="role" id="label-role">
-					Movilización
+                <label>Movilización
+					<small>(Selecciona todas las que apliquen)</small>
 				</label>
-                <select name="role" id="Movilizacion">
-					<option value="cambios-Movilizacion">Cambios posturales</option>
-					<option value="sillon-Movilizacion">Movilizar a sillón</option>
-					<option value="inmovi-Movilizacion">Inmovilización física preventiva</option>
-					<option value="acomp-Movilizacion">Acompañamiento en la ducha</option>
-				</select>
+                <label for="inp-1">
+					<input type="checkbox" name="inp" id="cambiosPost">Cambios posturales
+				</label>
+                <label for="inp-2">
+					<input type="checkbox" name="inp" id="movSillon">Movilizar a sillón
+				</label>
+                <label for="inp-3">
+					<input type="checkbox" name="inp" id="inmoviFisica">Inmovilización física preventiva
+				</label>
+                <label for="inp-4">
+					<input type="checkbox" name="inp" id="acompDucha">Acompañamiento en ducha
+				</label>
             </div>
 
-            <!--Higiene-->
+            <!--Procedimientos de higiene-->
             <div class="form-control">
-                <label for="role" id="label-role">
-					Higiene
+                <label>Procedimientos de higiene
+					<small>(Selecciona todas las que apliquen)</small>
 				</label>
-                <select name="role" id="Higiene">
-					<option value="cura-Higiene">Curaciones de catéteres</option>
-					<option value="nutri-Higiene">Nutrición enteral y cuidados</option>
-					<option value="cambio-Higiene">Cambio de tendidos de cama</option>
-				</select>
+                <label for="inp-1">
+					<input type="checkbox" name="inp" id="curCateter">Curaciones de catéteres
+				</label>
+                <label for="inp-2">
+					<input type="checkbox" name="inp" id="nutriEnteral">Nutrición enteral y cuidados
+				</label>
+                <label for="inp-3">
+					<input type="checkbox" name="inp" id="cambCama">Cambio de tendidos de cama
+				</label>
             </div>
 
             <!--Cuidados generales-->
             <div class="form-control">
-                <label for="role" id="label-role">
-					Cuidados generales
+                <label>Cuidados generales
+					<small>(Selecciona todas las que apliquen)</small>
 				</label>
-                <select name="role" id="CuidadosGenerales">
-					<option value="bath-CuidadosGenerales">Baño en cama</option>
-					<option value="higiene-CuidadosGenerales">Higiene bucal</option>
-					<option value="afeitado-CuidadosGenerales">Afeitado, corte de uñas</option>
-					<option value="hidratacion-CuidadosGenerales">Hidratación corporal</option>
-				</select>
+                <label for="inp-1">
+					<input type="checkbox" name="inp" id="bathCama">Baño en cama
+				</label>
+                <label for="inp-2">
+					<input type="checkbox" name="inp" id="higBucal">Higiene bucal
+				</label>
+                <label for="inp-3">
+					<input type="checkbox" name="inp" id="afeitado">Afeitado, corte uñas
+				</label>
+                <label for="inp-4">
+					<input type="checkbox" name="inp" id="hidratCorp">Hidratación corporal
+				</label>
             </div>
 
             <div class="form-control">

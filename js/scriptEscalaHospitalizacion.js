@@ -180,81 +180,73 @@ function depBarthel() {
     var AyudasDiagnosticas = document.getElementById('AyudasDiagnosticas');
     var horas = 0,
         minutos = 0;
-
+    // Monitorizacion
     if (document.getElementById('signos').checked == true) {
         tiempo += 6;
-        console.log(tiempo);
     }
-
     if (document.getElementById('balance').checked == true) {
         tiempo += 20;
-        console.log(tiempo);
     }
-
     if (document.getElementById('drenes').checked == true) {
         tiempo += 8;
-        console.log(tiempo);
     }
 
-    switch (Movilizacion.value) {
-        case 'cambios-Movilizacion':
-            tiempo += 30;
-            break;
-        case 'sillon-Movilizacion':
-            tiempo += 4;
-            break;
-        case 'inmovi-Movilizacion':
-            tiempo += 5;
-            break;
-        case 'acomp-Movilizacion':
-            tiempo += 15;
-            break;
+    // Movilizacion
+    if (document.getElementById('cambiosPost').checked == true) {
+        tiempo += 30;
+    }
+    if (document.getElementById('movSillon').checked == true) {
+        tiempo += 4;
+    }
+    if (document.getElementById('inmoviFisica').checked == true) {
+        tiempo += 5;
+    }
+    if (document.getElementById('acompDucha').checked == true) {
+        tiempo += 15;
     }
 
-    switch (CuidadosGenerales.value) {
-        case 'bath-CuidadosGenerales':
-            tiempo += 40;
-            break;
-        case 'higiene-CuidadosGenerales':
-            tiempo += 9;
-            break;
-        case 'afeitado-CuidadosGenerales':
-            tiempo += 5;
-            break;
-        case 'hidratacion-CuidadosGenerales':
-            tiempo += 4;
-            break;
-        case 'cambioRopa-CuidadosGenerales':
-            tiempo += 10;
-            break;
-        case 'cambioPanal-CuidadosGenerales':
-            tiempo += 10;
-            break;
-        case 'canal-CuidadosGenerales':
-            tiempo += 15;
-            break;
+    // Cuidados generales
+    if (document.getElementById('bathCama').checked == true) {
+        tiempo += 40;
+    }
+    if (document.getElementById('higBucal').checked == true) {
+        tiempo += 9;
+    }
+    if (document.getElementById('afeitado').checked == true) {
+        tiempo += 5;
+    }
+    if (document.getElementById('hidratCorp').checked == true) {
+        tiempo += 4;
+    }
+    if (document.getElementById('cambRopa').checked == true) {
+        tiempo += 10;
+    }
+    if (document.getElementById('cambPanal').checked == true) {
+        tiempo += 10;
+    }
+    if (document.getElementById('canalPerif').checked == true) {
+        tiempo += 15;
     }
 
-    switch (Nutricion.value) {
-        case 'cambios-Nutricion':
-            tiempo += 50;
-            break;
-        case 'dieta-Nutricion':
-            tiempo += 20;
-            break;
+    // Nutricion
+    if (document.getElementById('viaOral').checked == true) {
+        tiempo += 50;
+    }
+    if (document.getElementById('dietSonda').checked == true) {
+        tiempo += 20;
     }
 
-    switch (AyudasDiagnosticas.value) {
-        case 'traslado-AyudasDiagnosticas':
-            tiempo += 20;
-            break;
-        case 'quirurgica-AyudasDiagnosticas':
-            tiempo += 20;
-            break;
-        case 'diagnosticas-AyudasDiagnosticas':
-            tiempo += 20;
-            break;
+    // Preparación para procedimientos y ayudas diagnósticas
+    if (document.getElementById('trasPaciente').checked == true) {
+        tiempo += 20;
     }
+    if (document.getElementById('prepQuirur').checked == true) {
+        tiempo += 20;
+    }
+    if (document.getElementById('prepAyudas').checked == true) {
+        tiempo += 20;
+    }
+
     horas = tiempo / 60;
     minutos = tiempo % 60;
 
